@@ -1,0 +1,83 @@
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto";
+}
+
+#Game{
+  height: 700px;
+  width: 600px;
+  margin: 1rem auto;
+  border: 1px black solid;
+  background-image: url("background.jpg");
+  background-size: contain;
+  overflow: hidden;
+}
+
+#bluecar{
+  height: 100px;
+  width: 100px;
+  position: relative;
+  top: 0px;
+  left: 140px;
+  animation: bluecaranime 2s linear infinite;
+}
+
+#redcar{
+  height: 100px;
+  width: 50px;
+  position: relative;
+  top: 450px;
+  left: 230px;
+  /* animation: redcaranime 2s linear infinite; */
+}
+.img{
+  height: 100px;
+  width: 50px;
+}
+
+@keyframes bluecaranime {
+  0%{
+    top: 0px;
+  }
+  100%{
+    top: 600px;
+  }
+}
+
+/* @keyframes redcaranime {
+  0%{
+    top: 500px;
+  }
+  100%{
+    top: -100px;
+  }
+} */
+
+.btn{
+  cursor: pointer;
+  width: 120px;
+  height: 40px;
+  font-size: 20px;
+  padding: 5px;
+  text-align: center;
+  border-radius: 9px;
+  outline: none;
+  border: 1px black solid;
+  color: black;
+}
+
+#score{
+  font-size: 25px;
+
+}
+
+.sub{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  background-color: linear-gradient(toleft,#00ff00,#ff00ff,#ffff00);
+}
