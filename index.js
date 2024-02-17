@@ -20,52 +20,7 @@ score.textContent = count;
 })
 document.onkeydown = dkeys;
 document.onkeyup = ukeys;
-document.ontouchstart = touchleft;
-document.ontouchend = touchright;
 let position = 0;
-
-document.addEventListener("touchstart", onTouchStart);
-document.addEventListener("touchend", onTouchEnd);
-
-let touchStartX = 0;
-
-function onTouchStart(event) {
-    touchStartX = event.touches[0].clientX;
-}
-
-function onTouchEnd(event) {
-    let touchEndX = event.changedTouches[0].clientX;
-    let deltaX = touchEndX - touchStartX;
-
-    if (condition) {
-        if (deltaX > 0) {
-            // Swipe right
-            if (position === 0) {
-                redCar.style.left = "230px";
-                position += 1;
-            } else if (position === 1) {
-                redCar.style.left = "320px";
-                position += 1;
-            } else if (position === 2) {
-                redCar.style.left = "410px";
-                position += 1;
-            }
-        } else {
-            // Swipe left
-            if (position === 3) {
-                redCar.style.left = "320px";
-                position -= 1;
-            } else if (position === 2) {
-                redCar.style.left = "230px";
-                position -= 1;
-            } else if (position === 1) {
-                redCar.style.left = "140px";
-                position -= 1;
-            }
-        }
-    }
-}
-
 
 function dkeys(e){
     if(condition ){
